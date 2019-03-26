@@ -1,10 +1,9 @@
 [user]
-	email = samuel.waggoner@gmail.com
 	name = Samuel Waggoner
+	email = samuel.waggoner@gmail.com
 [core]
-        autocrlf = false
-        filemode = false
+	autocrlf = false
+	filemode = false
 [alias]
 	co = checkout
-	ci = commit
 	st = status
