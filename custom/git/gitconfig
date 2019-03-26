@@ -2,7 +2,7 @@
 	name = Samuel Waggoner
 	email = samuel.waggoner@gmail.com
 [core]
-	autocrlf = false
+	autocrlf = true
 	filemode = false
 	excludesfile = /home/samuel/.gitignore
 [alias]
