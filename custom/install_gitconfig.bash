@@ -6,17 +6,32 @@ function prompt_gitconfig {
   while true; do
     read -p "Do you wish to link .gitconfig? " yn
     case $yn in
-      [Yy]* ) copy_gitconfig; break;;
+      [Yy]* ) configure_git; break;;
       [Nn]* ) break;;
       * ) echo "Please answer yes or no.";;
     esac
   done
 }
 
-function copy_gitconfig {
+function link_gitconfig {
   source_file=$BASH_IT/custom/git/gitconfig
-  ln -sf $source_file $git_config_file
-  echo "Linked $git_config_file --> $source_file"
+  dest_file=$git_config_file
+  ln -sf $source_file $dest_file
+  echo "Linked $dest_file --> $source_file"
+}
+
+function link_gitignore {
+  source_file=$BASH_IT/custom/git/gitignore
+  dest_file=~/.gitignore
+  ln -sf $source_file $dest_file
+  git config --global core.excludesfile ~/.gitignore
+  echo "Linked $dest_file --> $source_file"
+}
+
+
+function configure_git {
+  link_gitconfig
+  link_gitignore
 }
 
 

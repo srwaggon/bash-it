@@ -4,6 +4,7 @@
 [core]
 	autocrlf = false
 	filemode = false
+	excludesfile = /home/samuel/.gitignore
 [alias]
 	co = checkout
 	st = status
