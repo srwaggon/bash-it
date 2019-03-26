@@ -46,6 +46,7 @@
 
 ;; set number of spaces for indentation
 (setq sh-basic-offset 2)
+(setq sh-indentation 2)
 (setq c-basic-offset 2)
 (setq js-indent-level 2)
 
