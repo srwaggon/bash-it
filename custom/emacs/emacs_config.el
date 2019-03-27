@@ -1,4 +1,3 @@
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -6,6 +5,23 @@
 (package-initialize)
 
 (load "~/.emacs.d/octave_config.el")
+
+(defun move-line-up ()
+  "Move the current line up."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode))
+(global-set-key [(control shift up)] 'move-line-up)
+
+(defun move-line-down ()
+  "Move the current line down."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+(global-set-key [(control shift down)] 'move-line-down)
 
 ;; Long live spaces
 (setq-default indent-tabs-mode nil)
@@ -37,11 +53,14 @@
 
 ;; turn on colors
 ;; Note: to change colors use: M-x customize-apropos-faces RET font-lock RET
+(load-theme 'wheatgrass)
 (set-background-color "Black")
 (set-foreground-color "White")
-(set-face-foreground 'font-lock-comment-face "Red")
+;;(set-face-foreground 'font-lock-comment-face "Red")
 (set-cursor-color "LightSkyBlue")
 (set-mouse-color "LightSkyBlue")
+
+
 (require 'font-lock)
 (setq font-lock-maximum-decoration 't)
 (global-font-lock-mode 't)
