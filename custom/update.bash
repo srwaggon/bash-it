@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-pushd ~/.bash-it
+pushd ~/.bash-it >> /dev/null
   git pull >> /dev/null
-popd
+popd >> /dev/null
