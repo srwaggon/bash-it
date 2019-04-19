@@ -1,3 +1,7 @@
+(require 'package)
+
+(load "~/.emacs.d/melpa_config.el")
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -131,9 +135,14 @@
 ;; Your init file should contain only one such instance.
 ;; If there is more than one, they won't work right.
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(display-time-mode t)
  '(menu-bar-mode nil)
+ '(package-selected-packages (quote (rjsx-mode)))
  '(save-place nil nil (saveplace))
  '(show-paren-mode t))
 
@@ -141,7 +150,13 @@
 ;; If you edit it by hand, you could mess it up, so be careful.
 ;; Your init file should contain only one such instance.
 ;; If there is more than one, they won't work right.
- (custom-set-faces)
+ 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
 (put 'upcase-region 'disabled nil)
 

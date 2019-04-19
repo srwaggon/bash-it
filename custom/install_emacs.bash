@@ -16,6 +16,13 @@ function link_emacs {
   create_link $source_file $dest_file
 }
 
+function link_melpa_config {
+  filename=melpa_config.el
+  source_file=$BASH_IT/custom/emacs/$filename
+  dest_file=~/.emacs.d/$filename
+  create_link $source_file $dest_file
+}
+
 function link_octave_config {
   filename=octave_config.el
   source_file=$BASH_IT/custom/emacs/$filename
@@ -33,4 +40,5 @@ function create_link {
 
 install_emacs
 link_emacs
+link_melpa_config
 link_octave_config
