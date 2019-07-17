@@ -6,7 +6,9 @@ git_config_file=~/.gitconfig
 function install_git {
   git --version >> /dev/null
   if [ $? -ne 0 ]; then
+    echo Installing git...
     sudo apt-get install git
+    echo Installing git... complete.
   fi
 }
 

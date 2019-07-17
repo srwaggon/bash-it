@@ -6,7 +6,9 @@ alias clean='rm -rf \#*\# && rm -rf .*~ && rm -rf *~'
 function install_emacs {
   emacs --version >> /dev/null
   if [ $? -ne 0 ]; then
-      sudo apt-get install emacs
+    echo Installing emacs...
+    sudo apt-get install emacs
+    echo Installing emacs... complete.
   fi
 }
 

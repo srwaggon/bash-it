@@ -1,6 +1,8 @@
 tmux -V >> /dev/null
 if [ $? -ne 0 ]; then
-    sudo apt-get install tmux
+  echo Installing tmux...
+  sudo apt-get install tmux
+  echo Installing tmux... complete.
 fi
 
 tmux_config=~/.tmux.conf
