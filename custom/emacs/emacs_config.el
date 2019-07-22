@@ -40,7 +40,8 @@
 (setq auto-mode-alist
       (append
        '(("\\.scm$" . scheme-mode)
-         ("\\.ss$"  . scheme-mode))
+         ("\\.ss$"  . scheme-mode)
+         ("\\.rkt$" . scheme-mode))
        auto-mode-alist))
 
 ;; teach Emacs to properly indent certain special forms
