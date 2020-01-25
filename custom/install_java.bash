@@ -7,7 +7,7 @@ function install_java() {
     sudo apt-get install openjdk-11-jdk-headless
     echo Installing Java... complete.
   fi
-  export JAVA_HOME=/usr/lib/java-11-openjdk-amd64/
+  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 }
 
 install_java
